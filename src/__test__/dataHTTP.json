@@ -1,0 +1,24 @@
+[
+    {
+        "type": "bulb",
+        "id": "1",
+        "name": "bulb1",
+        "connectionState": "connected",
+        "isTurnedOn": "false",
+        "brightness": "4",
+        "color": "some",
+        "powerConsumption": "3",
+        "temperature": "32"
+    },
+    {
+        "type": "outlet",
+        "id": "2",
+        "name": "outlet1",
+        "connectionState": "connected",
+        "isTurnedOn": "true",
+        "brightness": "4",
+        "color": "some",
+        "powerConsumption": "3",
+        "temperature": "32"
+    }
+]

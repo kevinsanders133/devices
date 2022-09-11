@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  margin: 20px auto;
+  width: 40%;
+  font-family: sans-serif;
+  @media screen and (max-width: 1200px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+  &__devices-list {
+    list-style: none;
+  }
+  &__devices-item {
+    padding: 10px;
+    margin-top: 10px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+    transition: background-color 0.1s;
+    transition: transform 0.2s;
+    border-radius: 10px;
+  }
+  &__devices-item:hover {
+    transition: background-color 0.1s;
+    transition: transform 0.2s;
+    background-color: rgb(235, 234, 234);
+    transform: translateX(10px);
+  }
+  &__devices-item:active {
+    background-color: rgb(201, 201, 201);
+  }
+}
+
+.dialog {
+  width: 300px;
+  height: 300px;
+  min-width: fit-content;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  inset: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+  border-radius: 10px;
+  touch-action: none;
+  user-select: none;
+  @media screen and (max-width: 600px) {
+    width: 200px;
+    height: 200px;
+  }
+  &__title {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+    width: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+  &__type {
+    margin-top: 10px;
+  }
+  &__id {
+    margin-bottom: 10px;
+  }
+  &__close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-image: url(./assets/close.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}

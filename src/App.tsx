@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Dialog from './Components/Dialog';
+import List from './Components/List';
+import { useAppSelector } from './store/hooks';
 
-function App() {
+const App: React.FC = () => {
+  const isShown = useAppSelector(state => state.dialog.isShown);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main className="main">
+        <List />
+        { isShown && <Dialog /> }
+      </main>
     </div>
-  );
+  )
 }
 
 export default App;

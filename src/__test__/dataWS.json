@@ -1,0 +1,11 @@
+{
+    "type": "bulb",
+    "id": "1",
+    "name": "bulb1",
+    "connectionState": "connected",
+    "isTurnedOn": "false",
+    "brightness": "32",
+    "color": "some",
+    "powerConsumption": "3",
+    "temperature": "32"
+}
